@@ -39,17 +39,19 @@
 .poemBox {
   background: #ffbbc0;
   border: 1px solid color-mix(in srgb, var(--red-pale) 50%, transparent);
-  border-radius: 100px;
-  padding: 0.35rem 0.7rem;
+  border-radius: 1.5rem; /* قللنا الدوران شوية عشان يسيب مساحة للكلام */
+  padding: 0.8rem 1.2rem; /* بادينج مناسب يخلي الكلام يتنفس */
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--text-light);
-  line-height: 1.4;
+  line-height: 1.5; /* كبرنا المسافة بين السطور حاجة بسيطة */
   text-align: center;
   display: flex;
-    align-items: center;
-    height: 71px;
+  align-items: center;
+  justify-content: center; /* عشان يسنتر الكلام بالعرض */
+  height: auto; /* شلنا الـ 71px وخليناها auto عشان يطول براحته */
+  width: fit-content;
 }
 
 .flowerCenter {
@@ -95,17 +97,54 @@
 }
 
 /* Mobile: stack columns */
+.poemCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* مسافة بسيطة بين الكبسولات */
+  width: 100%;
+  align-items: center; /* سنترة العمود نفسه */
+}
+
+.poemBox {
+  background: #ffbbc0;
+  border: 1px solid rgba(219, 39, 119, 0.2);
+  
+  /* العودة لشكل الكبسولة الأصلي */
+  border-radius: 50px; 
+  padding: 0.5rem 1.2rem;
+  
+  font-family: var(--font-body);
+  font-size: 0.85rem; /* حجم خط رقيق */
+  color: var(--text-light);
+  line-height: 1.3;
+  text-align: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* السر هنا في أرقام قريبة من تصميمك الأصلي */
+  width: 210px;       /* عرض ثابت ومناسب لموبايل ولاب من غير ما يبقى ضخم */
+  min-height: 75px;   /* طول ثابت يضمن إن الكل قد بعضه حتى لو الكلام قليل */
+  
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* ظل خفيف جداً للشياكة */
+}
+
+/* تعديل الـ layout لتقريب المسافات */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem; /* تقليل الفجوة بين الوردة والكلام */
+  width: 100%;
+  max-width: 600px; /* لمّ التصميم في نص الشاشة */
+  margin: 0 auto;
+}
+
 @media (max-width: 480px) {
-  .layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    justify-items: center;
+  .poemBox {
+    width: 180px;      /* تصغير العرض شوية للموبايل */
+    min-height: 65px;
+    font-size: 0.75rem;
   }
-  .poemCol {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 300px;
-  }
-  .poemBox { font-size: 0.58rem; padding: 0.25rem 0.5rem; }
 }
