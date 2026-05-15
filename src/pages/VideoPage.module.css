@@ -1,0 +1,97 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf2f8;
+  padding: 2rem;
+}
+
+.container {
+  /* جعل العرض مناسب للمحتوى فقط وليس الشاشة بالكامل */
+  width: fit-content;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  color: #db2777;
+  margin-bottom: 1rem;
+   /* محاذاة العنوان للجنب */
+}
+
+.videoFrame {
+  position: relative;
+  padding: 0.8rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fce7f3;
+}
+
+.tape {
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 3.5rem;
+  height: 1rem;
+  background-color: rgba(251, 207, 232, 0.8);
+  z-index: 5;
+}
+
+.videoInner {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #000;
+  line-height: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #000;
+  line-height: 0;
+  position: relative; /* ضروري جداً */
+  cursor: pointer; /* عشان الماوس يقلب إيد ويفهم إنه كليكابل */
+}
+
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4); /* تعتيم خفيف عشان الزرار يبان */
+  pointer-events: none; /* عشان الكليك يعدي للفيديو */
+}
+
+.playButton {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(219, 39, 119, 0.9); /* لون بينك غامق لايق مع الموقع */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  padding-left: 0.4rem; /* توسيط بصري لمثلث الـ play */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease;
+}
+
+/* حركة بسيطة لما الماوس ييجي على الفيديو */
+.videoInner:hover .playButton {
+  transform: scale(1.1);
+}
+.videoPlayer {
+ width: 500px;
+ height: 350px;
+  display: block;
+}

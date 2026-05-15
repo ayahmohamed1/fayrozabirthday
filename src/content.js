@@ -28,7 +28,7 @@ export const content = {
     title: "THESE ARE FOR YOU!",
     subtitle: "I hope you like it, I love you!",
     items: [
-      { id: "memories",  icon: "🖼️",  label: "Captured Memories" },
+      { id: "video",  icon: '🎥',  label: "our video" },
       { id: "flowers",   icon: "💐",  label: "Virtual Flowers" },
       { id: "locks",     icon: "🔒",  label: "Love Locks" },
       { id: "letter",    icon: "💌",  label: "Love Letter" },
@@ -36,19 +36,16 @@ export const content = {
   },
 
   // ── Page 4: Captured Memories ────────────────────────────────
-  memories: {
-    title: "Captured Memories",
-    // Place images in /public/images/ and reference here
-    images: [
-      { src: "/images/pic1.jpg", label: "first date 🌸", tag: "intrams" },
-      { src: "/images/pic2.jpg", label: "always ♥",      tag: "recent!" },
-      { src: "/images/pic3.jpg", label: "our trip 🌊",   tag: "" },
-      { src: "/images/pic4.jpg", label: "birthday 🎂",   tag: "birthday" },
-      { src: "/images/pic5.jpg", label: "us 💕",         tag: "" },
-      { src: "/images/pic6.jpg", label: "forever 🌷",    tag: "done research" },
-    ],
-    returnButton: "RETURN",
+  // ... (باقي الكود بتاعك)
+
+  // امسح الـ memories وحط ده:
+  video: {
+    title: "Press to play 🎬",
+    src: "/video/memory.MP4", // اعمل فولدر اسمه video جوه public وحط فيه الفيديو
+    poster: "/images/video-poster.jpg" // اختياري: صورة تظهر قبل ما الفيديو يشتغل
   },
+
+// ... (باقي الكود بتاعك)
 
   // ── Page 5: Virtual Flowers ──────────────────────────────────
   flowers: {
@@ -58,14 +55,14 @@ export const content = {
     flowerEmoji: "🌷",
     // Poem lines that float around the flower
     poems: [
-      "You keep me smiling, like a garden of flowers",
-      "You make the day feel like a bouquet of blooms",
-      "Your smile spreads like spring flowers in the field",
-      "You're as lovely as a garden full of flowers after the rain",
-      "Your presence is as refreshing as morning flowers",
-      "You bring color to life like flowers in spring",
-      "Your kindness blooms like petals in the breeze",
-      "You brighten the world, graceful as dancing flowers",
+       "لو كان ليا أمنية واحدة كل سنة، فهتبقى إنك تفضلي مبسوطة، قريبة مني، وحبيبتي لآخر العمر ❤",
+      "مهما كتبت كلام، عمري ما هوصف قد إيه أنا محظوظ إنك معايا… عيد ميلاد سعيد يا أجمل نعمة في حياتي 💞",
+      "سبع سنين وانتي لسه نفس الدفا، نفس الأمان، ونفس البنت اللي قلبي بيختارها كل يوم من جديد 🫂💞",
+      "يا بخت قلبي بيكي… كل سنة وانتي معايا 🤍",
+      "كل لحظة معاكي كانت سبب إني أحب الحياة أكتر",
+      "العمر كله مع بعض يفيروزة 💞🫂",
+      "وجودك في حياتي خلى لأيامي معنى، وكل سنة وانتي النور اللي مالي قلبي وحياتي 🫂💞",
+      "كل سنة وإنتي الأمان اللي عمري ما حسيته غير معاكي يفراشتي💞✨",
     ],
     returnButton: "RETURN",
   },
@@ -85,12 +82,31 @@ export const content = {
   letter: {
     title: "Message for my love",
     // Supports \n for line breaks
-    message: `Happy Birthday babe, 
-    I'm incredibly lucky to walk through life with you by my side. Watching you grow, seeing you smile, and sharing even the smallest moments with you is a gift I never take for granted.
+    message: `سبع سنين…
+سبع سنين وإنتي مش بس حبيبتي، إنتي بقيتي جزء مني، من أيامي، من كل تفصيلة حلوة عشتها ❤️
+النهارده عيد ميلادك،
+وعندي إحساس إني مهما كتبت واتكلمت، الكلام هيبقى أقل بكتير من اللي جوايا ليكي.
+لأن بعد السبع سنين دي كلها، لسه كل مرة بشوفك فيها قلبي بيدق بنفس اللهفة، ونفس الفرحة، كأني بحبك لأول مرة.
+كل سنة وانتي الوحيدة اللي قلبي اختارها من وسط الدنيا كلها.
+كل سنة وانتي أكتر شخص شافني في كل حالاتي، وفرح معايا، واستحملني، وكان سند وأمان من غير ما يطلب حاجة.
+سبع سنين وإنتي ثابتة جوا قلبي، وده لوحده كفاية يثبت إنك مش حب عادي…إنتي العمر كله❤️
 
-You make every day feel special just by being in it, so today I hope the world gives back even a fraction of the love and joy you bring into it. You deserve all the sweetness, all the peace, and all the happiness your heart can hold. I love you more than words can say, and I'm so proud of the person you are.
+فاكرة كام مرة زعلنا؟
+كام مرة الدنيا ضغطتنا؟
+ورغم كل حاجة… فضلنا ماسكين في بعض.
+وده أكتر حاجة بخليني متأكد إن وجودك في حياتي رزق، وإن مفيش حد يقدر ياخد مكانك أبدًا.
+إنتي مش مجرد حبيبتي…
+إنتي صاحبتي، وضهري، والونس اللي بيلحقني من الدنيا، والراحة اللي بلاقيها بعد أي تعب.
+ومهما الأيام تعدي، هيفضل عندي نفس الإحساس:
+إني محظوظ عشان إنتي معايا.ويمكن أحلى حاجة حصلتلي في السبع سنين دول…إن كل يوم كنت بصحى وفي حد يستاهل إني أحارب الدنيا عشانه❤️
+“سبع سنين حب…
+وما بين كل مرة قولتلك فيها بحبك،
+كان قلبي بيحبك أكتر من اللي قبلها.” ✨
+يارب السنة الجديدة من عمرك تبقى بداية لكل حاجة حلوة نفسك فيها،
+وتفضلي دايمًا مبسوطة، مطمنة، وقريبة مني.
+وأفضل أنا الشخص اللي قلبك يرتاحله مهما حصل.
 
-Happy Birthday, my heart — you are truly one of a kind.`,
+❤️عيد ميلاد سعيد يا أجمل قصة حب عشتها في حياتي `,
     signoff: "Sincerely yours,",
     signature: "The love of your life",
     returnButton: "RETURN",

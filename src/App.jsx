@@ -8,7 +8,8 @@ import { content } from './content.js'
 import WelcomePage   from './pages/WelcomePage.jsx'
 import NoThanksPage  from './pages/NoThanksPage.jsx'
 import MenuPage      from './pages/MenuPage.jsx'
-import MemoriesPage  from './pages/MemoriesPage.jsx'
+import VideoPage from './pages/VideoPage.jsx';
+// شيل السطر ده: import MemoriesPage from './pages/MemoriesPage';
 import FlowersPage   from './pages/FlowersPage.jsx'
 import SongPage      from './pages/SongPage.jsx'
 import LetterPage    from './pages/LetterPage.jsx'
@@ -49,8 +50,13 @@ export default function App() {
       case 'welcome':   return <WelcomePage  {...pageProps} key="welcome"  />
       case 'noThanks':  return <NoThanksPage {...pageProps} key="nothanks" />
       case 'menu':      return <MenuPage     {...pageProps} key="menu"     />
-      case 'memories':  return <MemoriesPage {...pageProps} key="memories" />
+      
+      // ضفنا صفحة الفيديو ومسحنا صفحة الميموريز القديمة
+      case 'video':   return <VideoPage  {...pageProps} key="video"  />
+      
+      // رجعنا صفحة الورد عشان تشتغل لما تدوس عليها في المنيو
       case 'flowers':   return <FlowersPage  {...pageProps} key="flowers"  />
+      
       case 'song':      return <SongPage     {...pageProps} key="song"     />
       case 'letter':    return <LetterPage   {...pageProps} key="letter"   />
       case 'locks':     return <LocksPage    {...pageProps} key="locks"    />

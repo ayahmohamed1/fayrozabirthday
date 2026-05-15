@@ -34,11 +34,11 @@
 }
 
 .line {
-  font-family: var(--font-hand);
-  font-size: larger;
-  line-height: 1.92;   /* match the ruled lines */
-  color: var(--text);
-  font-weight: 400;
+  font-family: ui-monospace;
+    font-size: large;
+    line-height: 1.72;
+    color: var(--text);
+    font-weight: 500;
 }
 
 .spacer { height: 1.92rem; }
