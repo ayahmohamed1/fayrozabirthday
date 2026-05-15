@@ -21,6 +21,7 @@
 }
 
 /* Lined paper look */
+/* Lined paper look */
 .letter {
   padding: 1rem 1.5rem;
   background: var(--paper);
@@ -30,22 +31,33 @@
     transparent 29px,
     color-mix(in srgb, var(--red-pale) 25%, transparent) 30px
   );
-  border-left: 3px solid var(--red-pale);
+  /* نقلنا الخط الأحمر لليمين عشان ده عربي */
+  border-right: 3px solid var(--red-pale);
+  border-left: none; /* عشان نمسح الخط القديم لو كان موجود في ديفولت المتصفح */
+  
+  /* قلبنا الصفحة عربي */
+  direction: rtl; 
 }
 
 .line {
-  font-family: emoji;
-    font-size: large;
-    line-height: 1.60;
-    color: var(--text);
-    font-weight: 400;
+  /* ضفنا خط Cairo للعربي عشان يطلع شكله حلو ومقروء */
+  font-family: 'Caveat'; 
+  font-size: large;
+  line-height: 1.60;
+  color: var(--text);
+  font-weight: 400;
 }
 
 .spacer { height: 1.92rem; }
 
 .signoff {
   margin-top: 1rem;
-  text-align: right;
+  /* نقلنا الإمضاء للشمال (عكس اتجاه الكلام العربي) */
+  text-align: left; 
+  
+  /* حافظنا على اتجاه الإنجليزي عشان الحروف متتلخبطش */
+  direction: ltr; 
+  
   font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--text-light);
