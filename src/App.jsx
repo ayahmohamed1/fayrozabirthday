@@ -45,18 +45,13 @@ export default function App() {
 
   const pageProps = { go, back, content, name }
 
-  const renderPage = () => {
+ const renderPage = () => {
     switch (current) {
       case 'welcome':   return <WelcomePage  {...pageProps} key="welcome"  />
       case 'noThanks':  return <NoThanksPage {...pageProps} key="nothanks" />
       case 'menu':      return <MenuPage     {...pageProps} key="menu"     />
-      
-      // ضفنا صفحة الفيديو ومسحنا صفحة الميموريز القديمة
-      case 'video':   return <VideoPage  {...pageProps} key="video"  />
-      
-      // رجعنا صفحة الورد عشان تشتغل لما تدوس عليها في المنيو
+      case 'video':     return <VideoPage    {...pageProps} key="video"    /> // صفحتنا الجديدة
       case 'flowers':   return <FlowersPage  {...pageProps} key="flowers"  />
-      
       case 'song':      return <SongPage     {...pageProps} key="song"     />
       case 'letter':    return <LetterPage   {...pageProps} key="letter"   />
       case 'locks':     return <LocksPage    {...pageProps} key="locks"    />
