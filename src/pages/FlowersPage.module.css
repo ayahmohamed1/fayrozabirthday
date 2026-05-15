@@ -98,6 +98,7 @@
 
 /* Mobile: stack columns */
 /* الموبايل: رص العناصر تحت بعضها */
+/* الموبايل: رص العناصر تحت بعضها */
 @media (max-width: 768px) {
   .layout {
     display: flex; /* إجبار العناصر تترص بطريقة الـ Flex بدل الـ Grid */

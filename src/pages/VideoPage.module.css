@@ -4,16 +4,17 @@
   align-items: center;
   justify-content: center;
   background-color: #fdf2f8;
-  padding: 2rem;
+  padding: 1.5rem; /* دي مساحة الأمان اللي بتمنعه يلزق في الشاشة */
+  box-sizing: border-box;
 }
 
 .container {
-  /* جعل العرض مناسب للمحتوى فقط وليس الشاشة بالكامل */
-  width: fit-content;
-  max-width: 90vw;
+  width: 100%;
+  max-width: 400px; /* ده اللي هيحجمه في اللاب توب عشان ميبقاش ضخم */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 .title {
@@ -21,16 +22,18 @@
   font-size: 2.2rem;
   color: #db2777;
   margin-bottom: 1rem;
-   /* محاذاة العنوان للجنب */
+  align-self: center;
 }
 
 .videoFrame {
   position: relative;
-  padding: 0.8rem;
+  padding: 0.8rem; /* الفريم الأبيض */
   background-color: #ffffff;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid #fce7f3;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tape {
@@ -49,12 +52,10 @@
   overflow: hidden;
   background-color: #000;
   line-height: 0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: #000;
-  line-height: 0;
-  position: relative; /* ضروري جداً */
-  cursor: pointer; /* عشان الماوس يقلب إيد ويفهم إنه كليكابل */
+  position: relative; 
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 9/16; /* السر هنا: بيحافظ على أبعاد فيديو الموبايل بالطول */
 }
 
 .playOverlay {
@@ -66,32 +67,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4); /* تعتيم خفيف عشان الزرار يبان */
-  pointer-events: none; /* عشان الكليك يعدي للفيديو */
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none; 
 }
 
 .playButton {
   width: 4rem;
   height: 4rem;
-  background-color: rgba(219, 39, 119, 0.9); /* لون بينك غامق لايق مع الموقع */
+  background-color: rgba(219, 39, 119, 0.9); 
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  padding-left: 0.4rem; /* توسيط بصري لمثلث الـ play */
+  padding-left: 0.4rem; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   transition: transform 0.2s ease;
 }
 
-/* حركة بسيطة لما الماوس ييجي على الفيديو */
 .videoInner:hover .playButton {
   transform: scale(1.1);
 }
+
 .videoPlayer {
- width: 500px;
- height: 350px;
+  width: 100%; /* بدل 500px */
+  height: 100%; /* بدل 350px */
+  object-fit: cover; /* عشان الفيديو يملى المساحة من غير ما يمط أو يتبكسل */
   display: block;
 }
